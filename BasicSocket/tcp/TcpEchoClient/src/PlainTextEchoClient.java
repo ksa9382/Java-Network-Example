@@ -15,6 +15,7 @@ public class PlainTextEchoClient {
 
         try (Socket s = new Socket(args[0], Integer.parseInt(args[1]));
              Scanner sc = new Scanner(System.in)) {
+            System.out.println("s.isConnected() = " + s.isConnected());
             System.out.println("Connected to server..");
 
             DataInputStream dis = new DataInputStream(s.getInputStream());

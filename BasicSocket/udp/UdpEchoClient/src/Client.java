@@ -22,8 +22,9 @@ public class Client {
             Random random = new Random();
 
             int loopCount = random.nextInt(1, 10);
+            System.out.println("loopCount = " + loopCount);
 
-            while ((--loopCount) > 0) {
+            while (--loopCount > 0) {
                 int count = random.nextInt(0, 10);
 
                 int[] array = new int[count];
@@ -31,27 +32,26 @@ public class Client {
                     array[i] = random.nextInt(0, 100);
 
                 // Convert int[] to byte[]
-                ByteBuffer byteBuffer = ByteBuffer.allocate(Math.min(count * 4, MAX_LENGTH));
-                IntBuffer intBuffer = byteBuffer.asIntBuffer();
-                intBuffer.put(array);
+                byte[] buff = toByteArray(array);
+                System.out.println("\nPacket: " + Arrays.toString(buff));
 
-                byte[] buff = byteBuffer.array();
-                System.out.println("Packet: " + Arrays.toString(buff));
-
-                // Determine datagram packet
-                DatagramPacket packet = new DatagramPacket(buff, 0, buff.length);
-                packet.setAddress(InetAddress.getByName(args[0]));
-                packet.setPort(Integer.parseInt(args[1]));
+                // Determine destination address to sending datagram packet.
+                DatagramPacket packet = new DatagramPacket(buff, 0, buff.length, InetAddress.getByName(args[0]), Integer.parseInt(args[1]));
 
                 // Send packet to server
                 ds.send(packet);
 
+                // Create a buffer for receiving echo data.
                 byte[] recvBuff = new byte[MAX_LENGTH];
                 DatagramPacket recvPacket = new DatagramPacket(recvBuff, MAX_LENGTH);
+
+                // Wait for receiving echo data.
                 ds.receive(recvPacket);
 
-                System.out.println("recvPacket.getSocketAddress() = " + recvPacket.getSocketAddress());
-                System.out.println("Received packet: " + Arrays.toString(recvPacket.getData()));
+                System.out.println("Received echo data..");
+                System.out.println("Source Address: " + recvPacket.getSocketAddress());
+                byte[] data = Arrays.copyOf(recvPacket.getData(), recvPacket.getLength());
+                System.out.println("Packet: " + Arrays.toString(data));
 
                 Thread.sleep(1000);
             }
@@ -62,5 +62,15 @@ public class Client {
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // Convert int[] to byte[]
+    public static byte[] toByteArray(int[] original) {
+        ByteBuffer byteBuffer = ByteBuffer.allocate(original.length * Integer.BYTES);
+        IntBuffer intBuffer = byteBuffer.asIntBuffer();
+
+        intBuffer.put(original);
+
+        return byteBuffer.array();
     }
 }

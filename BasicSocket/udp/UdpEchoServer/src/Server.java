@@ -13,6 +13,7 @@ public class Server {
             System.exit(1);
         }
 
+        // Create instances of a datagram socket and a datagram packet.
         try (DatagramSocket ds = new DatagramSocket(Integer.parseInt(args[0]))) {
             DatagramPacket packet = new DatagramPacket(new byte[MAX_LENGTH], MAX_LENGTH);
 
@@ -20,14 +21,17 @@ public class Server {
             System.out.println("LocalSocketAddress() = " + ds.getLocalSocketAddress() + ", " + "ReceiveBufferSize() = " + ds.getReceiveBufferSize());
 
             while (true) {
-                System.out.println("Start listen..");
+                System.out.println("\nStart listen..");
 
                 ds.receive(packet);
 
                 if (packet.getLength() == 0)
                     break;
 
+                System.out.println("Received data..");
+
                 byte[] data = packet.getData();
+                data = Arrays.copyOf(data, packet.getLength());
                 System.out.println("packet: " + Arrays.toString(data));
 
                 ds.send(packet);
