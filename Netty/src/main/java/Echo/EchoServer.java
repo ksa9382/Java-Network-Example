@@ -43,7 +43,7 @@ public class EchoServer {
     }
 
     public static void main(String[] args) throws Exception{
-        int port = 56401;
+        int port = 56402;
         if (args.length > 0)
             port = Integer.parseInt(args[0]);
 

@@ -21,15 +21,15 @@ public class Client {
         try (DatagramSocket ds = new DatagramSocket()) {
             Random random = new Random();
 
-            int loopCount = random.nextInt(1, 10);
+            int loopCount = random.nextInt(10);
             System.out.println("loopCount = " + loopCount);
 
             while (--loopCount > 0) {
-                int count = random.nextInt(0, 10);
+                int count = random.nextInt(10);
 
                 int[] array = new int[count];
                 for (int i = 0; i < count; i++)
-                    array[i] = random.nextInt(0, 100);
+                    array[i] = random.nextInt(100);
 
                 // Convert int[] to byte[]
                 byte[] buff = toByteArray(array);
