@@ -86,4 +86,47 @@ public class ReaderbleBytes {
         System.out.println("buf.writerIndex() = " + buf.writerIndex());
         System.out.println("buf.writableBytes() = " + buf.writableBytes() + "\n");
     }
+
+    public static class ByteBufSlice {
+        public static void main(String[] args) {
+            // 지정한 문자열 바이트를 저장하는 버퍼 생성
+            ByteBuf buf = Unpooled.copiedBuffer("Hello, World", StandardCharsets.UTF_8);
+            ByteBuf sliced = buf.slice(0, 5);   // Hello 부분 슬라이스
+            System.out.println("sliced = " + sliced);
+
+            buf.setByte(0, (byte)'C');
+            assert buf.getByte(0) == sliced.getByte(0);
+
+            ByteBuf copied = buf.copy(0, 5);
+            System.out.println("copied = " + copied);
+            buf.setByte(0, 'H');
+            assert buf.getByte(0) != copied.getByte(0);
+        }
+    }
+
+    /**
+     * capacity 초과 시 maxCapacity까지 확장되는 지 테스트
+     */
+    public static class CapacityAutomaticExtentionTest {
+        public static void main(String[] args) {
+            try {
+                ByteBuf limited = new UnpooledHeapByteBuf(ByteBufAllocator.DEFAULT, 5, 12);
+
+                // (cap: 5/12)
+                limited.writeBytes("Hello".getBytes(StandardCharsets.UTF_8));
+                System.out.println("limited = " + limited.getCharSequence(0, limited.readableBytes(), StandardCharsets.UTF_8));
+
+                // maxCapacity까지 자동확장 됨 (cap: 12/12)
+                limited.writeBytes(", World".getBytes(StandardCharsets.UTF_8));
+                System.out.println("limited = " + limited.getCharSequence(0, limited.readableBytes(), StandardCharsets.UTF_8));
+
+                // capacity > maxCapacity 13/12
+                limited.writeByte('.');
+                System.out.println("limited = " + limited.getCharSequence(0, limited.readableBytes(), StandardCharsets.UTF_8));
+            }
+            catch (IndexOutOfBoundsException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
