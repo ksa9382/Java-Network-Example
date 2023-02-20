@@ -11,6 +11,7 @@ import io.netty.util.CharsetUtil;
 public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("Connected to server..");
         // 활성화 시 메시지 전송(예제용)
         ctx.writeAndFlush(Unpooled.copiedBuffer("Netty rocks",
                 CharsetUtil.UTF_8));
