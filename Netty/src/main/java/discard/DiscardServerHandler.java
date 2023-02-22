@@ -15,6 +15,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter{
                 System.out.flush();
             }
         } finally {
+            // ChannelInboundHandler는 풀링된 ByteBuf 인스턴스의 메모리를 명시적으로 해제하는 역할을 맡음
             ReferenceCountUtil.release(msg);
         }
     }
