@@ -49,14 +49,15 @@ public class EchoServer2 {
 
     // Bootstrap the server and create an instance of ServerBootStrap.
     public static void main(String[] args) {
-        if (args.length < 1) {
-            System.err.println(
-                    "Usage: " + EchoServer2.class.getSimpleName() +
-                    "<port>");
-            return;
-        }
+//        if (args.length < 1) {
+//            System.err.println(
+//                    "Usage: " + EchoServer2.class.getSimpleName() +
+//                    "<port>");
+//            return;
+//        }
 
-        int port = Integer.parseInt(args[0]);
+//        int port = Integer.parseInt(args[0]);
+        int port = 12777;
         try {
             new EchoServer2(port).start();
         }
