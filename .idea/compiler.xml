@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Netty" />
         <module name="NettyHttpEchoServer" />
+        <module name="netty_wrap" />
         <module name="NettyEchoServer" />
+        <module name="NettyLoadBalancer" />
+        <module name="NettyTcpServer" />
+        <module name="Netty" />
+        <module name="NettyProxyServer" />
+        <module name="LengthTest" />
       </profile>
     </annotationProcessing>
   </component>

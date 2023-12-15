@@ -52,7 +52,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.example.NettyHttpEchoServer</mainClass>
+              <mainClass>org.gtkim.NettyHttpEchoServer</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

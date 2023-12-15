@@ -7,6 +7,11 @@
         <option value="$PROJECT_DIR$/Netty/pom.xml" />
         <option value="$PROJECT_DIR$/NettyEchoServer/pom.xml" />
         <option value="$PROJECT_DIR$/NettyHttpEchoServer/pom.xml" />
+        <option value="$PROJECT_DIR$/LengthTest/pom.xml" />
+        <option value="$PROJECT_DIR$/NettyLoadBalancer/pom.xml" />
+        <option value="$PROJECT_DIR$/NettyProxyServer/pom.xml" />
+        <option value="$PROJECT_DIR$/netty_wrap/pom.xml" />
+        <option value="$PROJECT_DIR$/NettyTcpServer/pom.xml" />
       </list>
     </option>
   </component>

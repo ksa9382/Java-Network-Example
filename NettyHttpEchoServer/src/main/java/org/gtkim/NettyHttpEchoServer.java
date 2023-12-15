@@ -1,4 +1,4 @@
-package org.example;
+package org.gtkim;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
