@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/KafkaClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/KafkaClient/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LengthTest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LengthTest/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Netty/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyEchoServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyEchoServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyHttpClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyHttpClient/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyHttpEchoServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyHttpEchoServer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyLoadBalancer/src/main/java" charset="UTF-8" />
@@ -15,6 +19,8 @@
     <file url="file://$PROJECT_DIR$/NettyProxyServer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyTcpServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyTcpServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyTcpTgrmResponseServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyTcpTgrmResponseServer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty_wrap/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/nettyWrap/tcp/adapter/AsyncTcpClient.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/nettyWrap/tcp/adapter/AsyncTcpServer.java" charset="UTF-8" />

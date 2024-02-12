@@ -9,7 +9,7 @@
             <PatternLayout pattern="${layoutPattern}" />
         </Console>
 
-        <RollingFile name="file" fileName="/${HOME}/logs/${logNm}.log" filePattern="/${HOME}/logs/bak/${logNm}_%d{yyyy-MM-dd}_%i.log">
+        <RollingFile name="file" fileName="./logs/${logNm}.log" filePattern="./logs/bak/${logNm}_%d{yyyy-MM-dd}_%i.log">
             <PatternLayout pattern="${layoutPattern}" />
             <Policies>
                 <SizeBasedTriggeringPolicy size="10MB" /> <!-- 10MB 용량이 초과시 DefaultRolloverStrategy 정책만큼 넘버링 -->
