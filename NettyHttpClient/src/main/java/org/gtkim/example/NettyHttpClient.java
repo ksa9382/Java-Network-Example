@@ -8,10 +8,12 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.*;
 import io.netty.handler.codec.http.multipart.HttpPostRequestEncoder;
-import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-@Slf4j
 public class NettyHttpClient {
+    static final Logger log = LogManager.getLogger(NettyHttpClient.class);
+
     ChannelFuture cf;
     EventLoopGroup group;
 
@@ -29,7 +31,7 @@ public class NettyHttpClient {
             cf = b.connect(host, port).sync();
 //            cf.channel().closeFuture().sync();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
@@ -51,7 +53,7 @@ public class NettyHttpClient {
         postRequestEncoder.close();
 //            cf.channel().writeAndFlush(request).addListener(ChannelFutureListener.CLOSE);
         cf.channel().writeAndFlush(request);
-//            System.out.println(request.toString());
+        log.debug(request.toString());
     }
 
     public void close() {
