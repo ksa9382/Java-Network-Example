@@ -10,22 +10,28 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
+import lombok.extern.slf4j.Slf4j;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * Hello world!
  *
  */
+@Slf4j
 public class NettyHttpEchoServer
 {
-    private static int PORT;
-
     public static void main(String[] args) throws Exception {
-        if (args.length < 1) {
-            System.out.println("Usage: java -jar HttpEchoServer {PORT}");
-            return;
-        }
+        String workspace  = System.getProperty("user.dir");
+        log.debug("Current Directory: [" + workspace + "]");
 
-        PORT = Integer.parseInt(args[0]);
+        Properties prop = loadProperties(workspace + File.separator + "resources" + File.separator + "application.properties");
+
+        int port = Integer.parseInt(prop.getProperty("serverPort"));
 
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -44,13 +50,26 @@ public class NettyHttpEchoServer
                         }
                     });
 
-            ChannelFuture future = serverBootstrap.bind(PORT).sync();
-            System.out.println("HTTP Echo Server started on port " + PORT);
+            log.debug("HTTP Echo Server started on port " + port);
+            ChannelFuture future = serverBootstrap.bind(port).sync();
 
             future.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
+    }
+
+    private static Properties loadProperties(String path) {
+        Properties prop = new Properties();
+
+        try (BufferedReader bis = new BufferedReader(new FileReader(path))){
+            prop.load(bis);
+            log.debug("properties file loaded. [" + prop.toString() + "]");
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+
+        return prop;
     }
 }

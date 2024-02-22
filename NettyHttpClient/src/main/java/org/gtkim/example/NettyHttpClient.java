@@ -11,6 +11,8 @@ import io.netty.handler.codec.http.multipart.HttpPostRequestEncoder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Objects;
+
 public class NettyHttpClient {
     static final Logger log = LogManager.getLogger(NettyHttpClient.class);
 
@@ -36,28 +38,7 @@ public class NettyHttpClient {
         }
     }
 
-    public void createRequest(String host, int port, String url) throws Exception {
-        HttpRequest request = null;
-        HttpPostRequestEncoder postRequestEncoder = null;
-
-//        request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, "/create"
-////                    ,Unpooled.copiedBuffer(url.getBytes(CharsetUtil.UTF_8))
-//        );
-
-        request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, url);
-        request.headers().set(HttpHeaderNames.CONTENT_TYPE, HttpHeaderValues.APPLICATION_X_WWW_FORM_URLENCODED);
-        request.headers().set(HttpHeaderNames.HOST, host+":"+port);
-        request.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
-//            request.headers().set(HttpHeaderNames.CONTENT_LENGTH, url.length());
-
-        postRequestEncoder = new HttpPostRequestEncoder(request, false);
-
-        if (!"".equals(url))
-            postRequestEncoder.addBodyAttribute("url", url);
-
-        request=postRequestEncoder.finalizeRequest();
-        postRequestEncoder.close();
-//            cf.channel().writeAndFlush(request).addListener(ChannelFutureListener.CLOSE);
+    public void send(HttpRequest request, boolean isMultipart) {
         cf.channel().writeAndFlush(request);
         log.debug(request.toString());
     }

@@ -5,9 +5,11 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.nio.charset.Charset;
 
+@Slf4j
 public class HttpEchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
@@ -17,7 +19,7 @@ public class HttpEchoServerHandler extends ChannelInboundHandlerAdapter {
             ByteBuf content = httpRequest.content();
             String requestContent = content.toString(Charset.forName("EUC-KR"));
 
-            System.out.println("Received HTTP Request:\n" + requestContent);
+            log.debug("Received HTTP Request:\n" + requestContent);
 
             FullHttpResponse httpResponse = new DefaultFullHttpResponse(
                     HttpVersion.HTTP_1_1,
@@ -26,6 +28,7 @@ public class HttpEchoServerHandler extends ChannelInboundHandlerAdapter {
             );
 
             ctx.writeAndFlush(httpResponse);
+            log.debug("Echo received data.");
 
             ctx.close();
         } else {
@@ -35,7 +38,7 @@ public class HttpEchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        cause.printStackTrace();
+        log.error(cause.toString());
         ctx.close();
     }
 }

@@ -24,6 +24,7 @@ public class NettyHttpHandler extends SimpleChannelInboundHandler<HttpObject> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
+        log.debug("Connected.. [" + ctx.channel().remoteAddress() + "]");
     }
 
     @Override

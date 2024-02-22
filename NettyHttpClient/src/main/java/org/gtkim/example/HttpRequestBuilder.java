@@ -1,12 +1,20 @@
 package org.gtkim.example;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.handler.codec.http.*;
 import io.netty.handler.codec.http.multipart.HttpPostRequestEncoder;
 import io.netty.util.AsciiString;
+import lombok.extern.slf4j.Slf4j;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
+@Slf4j
 public class HttpRequestBuilder {
-    private HttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, "");
-    boolean useMultipart = false;
+    private FullHttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, "");
+
+    String uri;
 
     public HttpRequestBuilder version(String httpVersion) {
         HttpVersion realHttpVersion = HttpVersion.HTTP_1_1;
@@ -60,6 +68,7 @@ public class HttpRequestBuilder {
     }
 
     public HttpRequestBuilder uri(String uri) {
+        this.uri = uri;
         request.setUri(uri);
         return this;
     }
@@ -85,23 +94,28 @@ public class HttpRequestBuilder {
         return this;
     }
 
-    public HttpRequestBuilder multipart(boolean useMultipart) {
-        this.useMultipart = useMultipart;
+    public HttpRequestBuilder content(String content, String encoding) {
+        Charset charset;
+        switch (encoding) {
+            case "EUC-KR":
+                charset = Charset.forName("EUC-KR");
+                break;
+            case "UTF-8":
+            default:
+                charset = StandardCharsets.UTF_8;
+        }
+
+        ByteBuf byteBuf = Unpooled.copiedBuffer(content, charset);
+        request.headers().set(HttpHeaderNames.CONTENT_ENCODING, charset);
+        request.headers().set(HttpHeaderNames.CONTENT_LENGTH, byteBuf.readableBytes());
+        request.content().clear().writeBytes(byteBuf);
+
         return this;
     }
 
     public HttpRequest build() {
         request.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE);
-        try {
-            HttpRequestEncoder requestEncoder = new HttpRequestEncoder();
-        }
-        HttpPostRequestEncoder postRequestEncoder = new HttpPostRequestEncoder(request, useMultipart);
 
-        if (!"".equals(url))
-            postRequestEncoder.addBodyAttribute("url", url);
-
-        request=postRequestEncoder.finalizeRequest();
-        postRequestEncoder.close();
 
         return request;
     }
