@@ -1,4 +1,4 @@
-package org.gtkim.nettyWrap.tcp.adapter;
+package org.gtkim.example.nettyWrap.tcp.adapter;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;

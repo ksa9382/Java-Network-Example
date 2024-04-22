@@ -2,8 +2,6 @@ package org.gtkim;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.gtkim.nettyWrap.tcp.adapter.AsyncTcpClient;
-import org.gtkim.nettyWrap.tcp.adapter.handler.ClientHandler;
 import org.gtkim.nettyWrap.tcp.adapter.handler.ProxyServerHandler;
 
 import java.io.BufferedInputStream;

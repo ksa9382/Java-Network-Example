@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Network-Example.iml" filepath="$PROJECT_DIR$/.idea/Java-Network-Example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BasicSocket/tcp/PlainText/TcpEchoClient/TcpEchoClient.iml" filepath="$PROJECT_DIR$/BasicSocket/tcp/PlainText/TcpEchoClient/TcpEchoClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BasicSocket/tcp/PlainText/TcpEchoServer/TcpEchoServer.iml" filepath="$PROJECT_DIR$/BasicSocket/tcp/PlainText/TcpEchoServer/TcpEchoServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BasicSocket/udp/UdpEchoClient/UdpEchoClient.iml" filepath="$PROJECT_DIR$/BasicSocket/udp/UdpEchoClient/UdpEchoClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BasicSocket/udp/UdpEchoServer/UdpEchoServer.iml" filepath="$PROJECT_DIR$/BasicSocket/udp/UdpEchoServer/UdpEchoServer.iml" />
     </modules>
   </component>
 </project>

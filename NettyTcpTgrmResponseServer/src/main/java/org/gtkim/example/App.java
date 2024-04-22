@@ -2,7 +2,7 @@ package org.gtkim.example;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.gtkim.nettyWrap.tcp.adapter.AsyncTcpServer;
+import org.gtkim.example.nettyWrap.tcp.adapter.AsyncTcpServer;
 
 import java.io.BufferedInputStream;
 import java.io.File;

@@ -8,7 +8,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.gtkim.ProxyServer;
-import org.gtkim.nettyWrap.tcp.adapter.AsyncTcpClient;
+import org.gtkim.example.nettyWrap.tcp.adapter.AsyncTcpClient;
 
 @ChannelHandler.Sharable
 public class ProxyServerHandler extends ChannelInboundHandlerAdapter {

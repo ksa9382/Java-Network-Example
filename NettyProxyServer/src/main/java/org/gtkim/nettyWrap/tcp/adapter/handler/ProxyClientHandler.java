@@ -4,12 +4,11 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelOutboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.gtkim.ProxyServer;
-import org.gtkim.nettyWrap.tcp.adapter.AsyncTcpClient;
+import org.gtkim.example.nettyWrap.tcp.adapter.AsyncTcpClient;
 
 @ChannelHandler.Sharable
 public class ProxyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
