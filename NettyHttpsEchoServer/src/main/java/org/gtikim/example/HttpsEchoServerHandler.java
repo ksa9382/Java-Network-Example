@@ -1,18 +1,16 @@
-package org.gtkim.example;
+package org.gtikim.example;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import java.nio.charset.Charset;
 
-public class HttpEchoServerHandler extends ChannelInboundHandlerAdapter {
-    private static final Logger log = LogManager.getLogger(HttpEchoServerHandler.class);
-
+@Slf4j
+public class HttpsEchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         if (msg instanceof FullHttpRequest) {

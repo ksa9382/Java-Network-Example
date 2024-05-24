@@ -5,25 +5,22 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
+@Getter
+@RequiredArgsConstructor
 @ChannelHandler.Sharable
 public class AsyncTcpServer implements Runnable {
-    private int port;
-    private ChannelInboundHandlerAdapter handler;
+    private final int port;
+    private final ChannelInboundHandlerAdapter handler;
 
     private EventLoopGroup boss;
     private EventLoopGroup worker;
 
     private ServerBootstrap serverBootstrap;
-
-    public AsyncTcpServer(int port, ChannelInboundHandlerAdapter handler) {
-        this.port = port;
-        this.handler = handler;
-    }
-
-    public int getPort() {
-        return port;
-    }
 
     public AsyncTcpServer init() throws Exception{
         boss = new NioEventLoopGroup();
@@ -35,7 +32,7 @@ public class AsyncTcpServer implements Runnable {
                 .localAddress(port)
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
-                    protected void initChannel(SocketChannel socketChannel) throws Exception {
+                    protected void initChannel(SocketChannel socketChannel) {
                         socketChannel.pipeline().addLast(handler);
                     }
                 });
@@ -48,7 +45,7 @@ public class AsyncTcpServer implements Runnable {
             ChannelFuture future = serverBootstrap.bind().sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         } finally {
             boss.shutdownGracefully();
             worker.shutdownGracefully();

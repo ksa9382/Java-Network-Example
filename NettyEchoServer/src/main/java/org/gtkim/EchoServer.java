@@ -32,7 +32,7 @@ public class EchoServer {
                             socketChannel.pipeline().addLast(new EchoServerHandler());
                         }
                     });
-            // 서버를 비동기식으로 바인딩
+            // 서버를 동기식으로 바인딩
             ChannelFuture f = b.bind().sync();  // sync는 바인딩이 완료되기를 대기
 
             // 채널의 CloseFuture를 얻고 완료될 때까지 현재 스레드를 블로킹

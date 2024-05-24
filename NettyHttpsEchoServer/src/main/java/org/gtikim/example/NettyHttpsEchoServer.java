@@ -1,4 +1,4 @@
-package org.gtkim.example;
+package org.gtikim.example;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -10,34 +10,27 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
-import io.netty.handler.ssl.SslContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Properties;
 
 /**
  * Hello world!
  *
  */
-public class NettyHttpEchoServer
+@Slf4j
+public class NettyHttpsEchoServer
 {
-    private static final Logger log = LogManager.getLogger(NettyHttpEchoServer.class);
-
     public static void main(String[] args) throws Exception {
         String workspace  = System.getProperty("user.dir");
         log.debug("Current Directory: [" + workspace + "]");
 
-        Properties prop = loadProperties(workspace + File.separator + ".." + File.separator + "resources" + File.separator + "application.properties");
+        Properties prop = loadProperties(workspace + File.separator + "resources" + File.separator + "application.properties");
 
-        final String mode = prop.getProperty("mode");
-        final String sslPath = prop.getProperty("sslPath");
-        final String sslPassword = prop.getProperty("sslPassword");
         int port = Integer.parseInt(prop.getProperty("serverPort"));
 
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -51,22 +44,9 @@ public class NettyHttpEchoServer
                         @Override
                         protected void initChannel(SocketChannel ch) {
                             ChannelPipeline pipeline = ch.pipeline();
-
-                            if ("https".equalsIgnoreCase(mode)) {
-                                try {
-                                    SslContext sslContext = SslContextFactory.createSslContext(sslPath, sslPassword);
-
-                                    log.debug("Created ssl context..");
-
-                                    pipeline.addLast(sslContext.newHandler(ch.alloc()));
-                                } catch (Exception e) {
-                                    log.error(e.getCause());
-                                }
-                            }
-
                             pipeline.addLast(new HttpServerCodec());
                             pipeline.addLast(new HttpObjectAggregator(65536));
-                            pipeline.addLast(new HttpEchoServerHandler());
+                            pipeline.addLast(new HttpsEchoServerHandler());
                         }
                     });
 

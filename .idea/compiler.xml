@@ -17,6 +17,7 @@
         <module name="NettyProxyServer" />
         <module name="LengthTest" />
         <module name="KafkaClient" />
+        <module name="NettyHttpsEchoServer" />
         <module name="NettyTcpTgrmResponseServer" />
       </profile>
     </annotationProcessing>

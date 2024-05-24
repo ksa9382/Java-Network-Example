@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
-  <artifactId>NettyHttpEchoServer</artifactId>
+  <groupId>org.gtikim</groupId>
+  <artifactId>NettyHttpsEchoServer</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>NettyHttpEchoServer</name>
+  <name>NettyHttpsEchoServer</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -28,39 +28,45 @@
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
-      <version>4.1.51.Final</version>
+      <version>4.1.101.Final</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.12.1</version>
+      <version>2.22.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
-      <version>2.12.1</version>
+      <version>2.22.0</version>
     </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>1.7.25</version>
+      <version>2.0.9</version>
     </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>0.9.3</version>
+      <version>1.18.30</version>
     </dependency>
 
-<!--    <dependency>-->
-<!--      <groupId>org.apache.commons</groupId>-->
-<!--      <artifactId>commons-lang3</artifactId>-->
-<!--      <version>3.12.0</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.24.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.12.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -82,7 +88,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.gtkim.example.NettyHttpEchoServer</mainClass>
+              <mainClass>org.gtkim.example.NettyHttpsEchoServer</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

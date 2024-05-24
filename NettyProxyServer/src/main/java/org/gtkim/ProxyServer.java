@@ -1,5 +1,8 @@
 package org.gtkim;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.gtkim.example.nettyWrap.tcp.adapter.AsyncTcpClient;
@@ -8,8 +11,10 @@ import org.gtkim.nettyWrap.tcp.adapter.handler.ClientHandler;
 import org.gtkim.nettyWrap.tcp.adapter.handler.ProxyClientHandler;
 import org.gtkim.nettyWrap.tcp.adapter.handler.ProxyServerHandler;
 
+@Slf4j
+@Getter
 public class ProxyServer extends AsyncTcpServer{
-    private static final Logger log = LogManager.getLogger(ProxyServer.class);
+//    private static final Logger log = LogManager.getLogger(ProxyServer.class);
 
     private String proxyIp;
     private int proxyPort;
@@ -22,24 +27,25 @@ public class ProxyServer extends AsyncTcpServer{
 
     public ProxyServer(int localPort, ProxyServerHandler handler) {
         super(localPort, handler);
-        handler.bindParent(this);
+//        handler.bindParent(this);
+        handler.setParent(this);
     }
 
-    public String getProxyIp() {
-        return proxyIp;
-    }
-
-    public int getProxyPort() {
-        return proxyPort;
-    }
-
-    public String getClientIp() {
-        return clientIp;
-    }
-
-    public int getClientPort() {
-        return clientPort;
-    }
+//    public String getProxyIp() {
+//        return proxyIp;
+//    }
+//
+//    public int getProxyPort() {
+//        return proxyPort;
+//    }
+//
+//    public String getClientIp() {
+//        return clientIp;
+//    }
+//
+//    public int getClientPort() {
+//        return clientPort;
+//    }
 
     public ProxyServer initServer() throws Exception{
         init();
@@ -84,13 +90,13 @@ public class ProxyServer extends AsyncTcpServer{
             log.error("Failed to connect to remote host: [" + client.getRemoteIp() + ":" + client.getRemotePort() + "]");
     }
 
-    public AsyncTcpClient getProxyClient() {
-        return proxyClient;
-    }
-
-    public AsyncTcpClient getClient() {
-        return client;
-    }
+//    public AsyncTcpClient getProxyClient() {
+//        return proxyClient;
+//    }
+//
+//    public AsyncTcpClient getClient() {
+//        return client;
+//    }
 
     public boolean reconnectClient() throws Exception{
         startClient();

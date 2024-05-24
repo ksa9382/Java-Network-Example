@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/KafkaClient/pom.xml" />
         <option value="$PROJECT_DIR$/NettyTcpTgrmResponseServer/pom.xml" />
         <option value="$PROJECT_DIR$/NettyHttpClient/pom.xml" />
+        <option value="$PROJECT_DIR$/NettyHttpsEchoServer/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

@@ -4,18 +4,22 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.gtkim.ProxyServer;
 
+@Slf4j
+@RequiredArgsConstructor
 public class ClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    private static final Logger log = LogManager.getLogger(ClientHandler.class);
-    private ProxyServer parent;
+//    private static final Logger log = LogManager.getLogger(ClientHandler.class);
+    private final ProxyServer parent;
 
-    public ClientHandler(ProxyServer parent) {
-        super();
-        this.parent = parent;
-    }
+//    public ClientHandler(ProxyServer parent) {
+//        super();
+//        this.parent = parent;
+//    }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

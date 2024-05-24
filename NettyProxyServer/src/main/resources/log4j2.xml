@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO">
     <Properties>
-        <Property name="logNm">logtest</Property>
+        <Property name="logNm">NettyProxyServer</Property>
         <Property name="layoutPattern">%d [%t] %-5level %c{1}(%M:%L) - %m%n</Property>
     </Properties>
     <Appenders>
@@ -38,6 +38,10 @@
             <AppenderRef ref="file" />
         </logger>
 
+        <logger name="org.gtkim" level="debug" additivity="false" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
 
         <!-- rolling file에는 debug, console에는 info 분리하여 처리 가능하다. -->
         <logger name="com.test" additivity="false" >

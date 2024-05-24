@@ -5,30 +5,34 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.gtkim.ProxyServer;
 import org.gtkim.example.nettyWrap.tcp.adapter.AsyncTcpClient;
 
+@Slf4j
+@RequiredArgsConstructor
 @ChannelHandler.Sharable
 public class ProxyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    private static final Logger log = LogManager.getLogger(ProxyClientHandler.class);
-    private ProxyServer parent;
+//    private static final Logger log = LogManager.getLogger(ProxyClientHandler.class);
+    private final ProxyServer parent;
 
-    public ProxyClientHandler(ProxyServer parent) {
-        this.parent = parent;
-    }
+//    public ProxyClientHandler(ProxyServer parent) {
+//        this.parent = parent;
+//    }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
-        log.debug("Connected to proxy[" + ctx.channel().remoteAddress() + "]");
+        log.info("Connected to proxy[" + ctx.channel().remoteAddress() + "]");
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         super.channelInactive(ctx);
-        log.debug("Disconnected from proxy[" + ctx.channel().remoteAddress() + "]");
+        log.info("Disconnected from proxy[" + ctx.channel().remoteAddress() + "]");
     }
 
     protected void channelRead0(ChannelHandlerContext ctx, ByteBuf byteBuf) throws Exception {
@@ -38,7 +42,7 @@ public class ProxyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
         String data = new String(rawData);
 
-        log.debug("Received response: [" + rawData.length + " bytes], Data: [" + data + "]");
+        log.info("Received response: [" + rawData.length + " bytes], Data: [" + data + "]");
 
         AsyncTcpClient client = parent.getClient();
 
@@ -49,7 +53,7 @@ public class ProxyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
         client.send(rawData);
 
-        log.debug("Success to send to remote host. [" + client.getRemoteIp() + ":" + client.getRemotePort() + "]");
+        log.info("Success to send to remote host. [" + client.getRemoteIp() + ":" + client.getRemotePort() + "]");
     }
 
     @Override
