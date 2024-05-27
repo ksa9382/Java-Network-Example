@@ -1,0 +1,34 @@
+# Netty TCP 채널 옵션 설정
+netty:
+  # TCP 채널 옵션
+  channel:
+    # 목적지 IP
+    remoteIp: 192.168.1.225
+    # 목적지 PORT
+    remotePort: 59070
+    # TCP 연결 타임아웃 (밀리초)
+    connectTimeout: 30000
+    # 읽기 타임아웃 (밀리초)
+    readTimeout: 60000
+    # TCP Keep-Alive 설정
+    keepAlive: true
+    # TCP Keep-Alive Idle 시간 (밀리초)
+    keepAliveIdleTime: 120000
+    # TCP Keep-Alive Interval 시간 (밀리초)
+    keepAliveInterval: 60000
+    # TCP Keep-Alive Retransmit Attempts
+    keepAliveRetries: 3
+    # TCP 부하 분산 알고리즘
+    trafficClass: 1
+    # TCP 버퍼 크기 (바이트)
+    receiveBufferSize: 65536
+    # TCP 버퍼 크기 (바이트)
+    sendBufferSize: 65536
+    # TCP Nagle 알고리즘 사용 여부
+    tcpNoDelay: true
+    # TCP Nagle 알고리즘과 함께 사용할 수 있는 최소 예약 크기 (바이트)
+    tcpNagleThreshold: 4096
+    # TCP 연결 재사용 여부
+    soReuseAddr: true
+    # TCP 연결이 종료된 후에도 소켓을 얼마나 유지할지 설정(밀리초)
+    soLinger: 10
