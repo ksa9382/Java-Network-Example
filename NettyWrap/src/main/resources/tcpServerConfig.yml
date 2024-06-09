@@ -2,43 +2,43 @@
 netty:
   # TCP 채널 옵션
   channel:
-    # TCP 연결 타임아웃 (초)
-    connectTimeout: 30
-    # 읽기 타임아웃 (초)
-    readTimeout: 60
-    # 쓰기 타임아웃 (초)
-    writeTimeout: 60
-    # TCP Keep-Alive 설정
-    keepAlive: true
-    # TCP Keep-Alive Idle 시간 (초)
-    keepAliveIdleTime: 120
-    # TCP Keep-Alive Interval 시간 (초)
-    keepAliveInterval: 60
-    # TCP Keep-Alive Retransmit Attempts
-    keepAliveRetries: 3
-    # TCP 부하 분산 알고리즘
-    trafficClass: 1
-    # TCP 버퍼 크기 (바이트)
-    receiveBufferSize: 65536
-    # TCP 버퍼 크기 (바이트)
-    sendBufferSize: 65536
-    # TCP Nagle 알고리즘 사용 여부
-    tcpNoDelay: true
-    # TCP Nagle 알고리즘과 함께 사용할 수 있는 최소 예약 크기 (바이트)
-    tcpNagleThreshold: 4096
-    # TCP 연결 재사용 여부
-    soReuseAddr: true
-    # SO_KEEPALIVE 옵션 사용 여부
-    soKeepAlive: true
+    server:
+      # Tcp Accept Port
+      port: 15151
+      # 작업 스레드 수
+      workThread: 10
+      # TCP 연결 타임아웃 (초)
+      connectionTimeout: 30
+      # 읽기 타임아웃 (초)
+      readTimeout: 60
+      # TCP Keep-Alive 설정
+      keepAlive: true
+      # TCP Keep-Alive Idle 시간 (초)
+      keepAliveIdleTime: 120
+      # TCP Keep-Alive Interval 시간 (초)
+      keepAliveInterval: 60
+      # TCP Keep-Alive Retransmit Attempts
+      keepAliveRetries: 3
+      # TCP 부하 분산 알고리즘
+      trafficClass: 1
+      # TCP 버퍼 크기 (바이트)
+      receiveBufferSize: 65536
+      # TCP 버퍼 크기 (바이트)
+      sendBufferSize: 65536
+      # TCP Nagle 알고리즘 사용 여부
+      tcpNoDelay: true
+      # TCP Nagle 알고리즘과 함께 사용할 수 있는 최소 예약 크기 (바이트)
+      tcpNagleThreshold: 4096
+      # TCP 연결 재사용 여부
+      soReuseAddr: true
+      # SO_KEEPALIVE 옵션 사용 여부
+      soKeepAlive: true
+      # TCP 서버 백로그 크기
+      backlog: 100
+      # TCP 서버 소켓 재사용 포트 여부
+      soReusePort: true
+
 #    # SO_LINGER 옵션 사용 여부
 #    soLingerEnabled: false
 #    # SO_LINGER 옵션 값 (초)
 #    soLingervalue: 0
-#  # TCP 서버 옵션
-#  server:
-#    # TCP 서버 백로그 크기
-#    backlog: 100
-#    # TCP 서버 소켓 재사용 여부
-#    soReuseAddr: true
-#    # TCP 서버 소켓 재사용 포트 여부
-#    soReusePort: true

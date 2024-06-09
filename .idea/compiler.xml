@@ -12,7 +12,6 @@
         <module name="netty_wrap" />
         <module name="NettyEchoServer" />
         <module name="NettyLoadBalancer" />
-        <module name="NettyTcpServer" />
         <module name="Netty" />
         <module name="NettyProxyServer" />
         <module name="LengthTest" />
@@ -28,5 +27,9 @@
         <module name="NettyWrap.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="NettyEchoServer2" target="17" />
+      <module name="NettyTcpServer" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

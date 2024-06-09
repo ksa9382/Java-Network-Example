@@ -2,11 +2,14 @@ spring:
   application:
     name: NettyWrap
   datasource:
-    url: jdbc:mysql://localhost:3306/testDB
-    username: root
+    url: jdbc:mysql://localhost:3306/TOBI_SPRING_DB
+    username: tobi
     password: ks24453944
     driver-class-name: com.mysql.cj.jdbc.Driver
   config:
     import:
       - tcpClientConfig.yml
       - tcpServerConfig.yml
+
+deploy:
+  mode: server

@@ -1,55 +1,44 @@
 package org.gtikim.nettywrap.tcp.config;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Getter
+@Setter
 @Configuration
+@ConfigurationProperties(prefix = "netty.channel.client")
 public class TcpClientConfig {
-    @Value("${netty.channel.remoteIp}")
     private String remoteIp;
 
-    @Value("${netty.channel.remotePort}")
     private int remotePort;
 
-    @Value("${netty.channel.connectTimeout}")
     private int connectTimeout;
 
-    @Value("${netty.channel.readTimeout}")
     private int readTimeout;
 
-    @Value("${netty.channel.keepAlive}")
     private boolean keepAlive;
 
-    @Value("${netty.channel.keepAliveIdleTime}")
     private int keepAliveIdleTime;
 
-    @Value("${netty.channel.keepAliveInterval}")
     private int keepAliveInterval;
 
-    @Value("${netty.channel.keepAliveRetries}")
     private int keepAliveRetries;
 
-    @Value("${netty.channel.trafficClass}")
     private int trafficClass;
 
-    @Value("${netty.channel.receiveBufferSize}")
     private int receiveBufferSize;
 
-    @Value("${netty.channel.sendBufferSize}")
     private int sendBufferSize;
 
-    @Value("${netty.channel.tcpNoDelay}")
     private boolean tcpNoDelay;
 
-    @Value("${netty.channel.tcpNagleThreshold}")
     private int tcpNagleThreshold;
 
-    @Value("${netty.channel.soReuseAddr}")
     private boolean soReuseAddr;
 
-    @Value("${netty.channel.soLinger}")
     private int soLinger;
 
     @Override

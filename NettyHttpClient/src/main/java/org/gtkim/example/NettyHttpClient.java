@@ -8,14 +8,14 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.*;
 import io.netty.handler.codec.http.multipart.HttpPostRequestEncoder;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
+@Slf4j
 public class NettyHttpClient {
-    static final Logger log = LogManager.getLogger(NettyHttpClient.class);
-
     ChannelFuture cf;
     EventLoopGroup group;
 

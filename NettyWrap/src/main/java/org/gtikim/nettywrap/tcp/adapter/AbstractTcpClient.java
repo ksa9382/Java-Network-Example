@@ -7,8 +7,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.gtikim.nettywrap.tcp.config.TcpClientConfig;
-import org.gtikim.nettywrap.tcp.handler.TcpClientInitializer;
-import org.springframework.stereotype.Component;
+import org.gtikim.nettywrap.tcp.initializer.TcpClientInitializer;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +18,6 @@ import java.util.Optional;
 @Slf4j
 @Getter
 @RequiredArgsConstructor
-@Component
 public class AbstractTcpClient implements ITcpClient {
     private final TcpClientConfig config;
     private final TcpClientInitializer initializer;
