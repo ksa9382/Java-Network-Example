@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73dd1a95-0bc2-45b9-86e2-b7d4ab2cd5ef" name="변경" comment="FIX:">
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/main/java/kr/co/direa/basicsocket/BasicSocketClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/main/java/kr/co/direa/basicsocket/client/PlainTextEchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/main/java/kr/co/direa/basicsocket/config/TcpClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/main/java/kr/co/direa/basicsocket/properties/TcpClientProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicSocketClient/src/test/java/kr/co/direa/basicsocket/BasicSocketClientApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/src/main/java/kr/co/direa/lottecardinteractiontest/LotteCardInteractionTestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LotteCardInteractionTest/src/test/java/kr/co/direa/lottecardinteractiontest/LotteCardInteractionTestApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyEchoServer/java1.7.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyEchoServer/java1.8.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/response/A2ATransactionResponseCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/response/S2ATransactionResponseCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/NettyServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/config/AsyncConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/config/NettyServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/decoder/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/handler/DefaultNettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/processor/AsyncProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/processor/AsyncProcessorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/java/kr/co/direa/nettyserver/run/AsyncServerRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyServer/src/test/java/kr/co/direa/nettyserver/NettyServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/main/java/kr/co/direa/netty/tcp/NettyTcpClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/main/java/kr/co/direa/netty/tcp/component/NettyTcpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/main/java/kr/co/direa/netty/tcp/handler/TcpSyncClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/main/java/kr/co/direa/netty/tcp/properties/NettyTcpClientProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NettyTcpClient/src/test/java/kr/co/direa/netty/tcp/NettyTcpClientApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Java-Network-Example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/NettyWrap.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicSocket/tcp/PlainText2/TCP_T2T_Test_Client/TCP_T2T_Test_Client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicSocket/tcp/PlainText2/TCP_T2T_Test_Server/TCP_T2T_Test_Server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaClient/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaClient/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaClient/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaClient/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaClient/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/EchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/EchoClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LengthTest/src/main/java/kr/co/direa/EchoClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyEchoServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/EchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/java/org/gtkim/EchoServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyEchoServer/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyEchoServer/src/test/java/org/gtkim/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/HttpRequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/HttpRequestBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/NettyHttpChannelInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/NettyHttpChannelInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/NettyHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpClient/src/main/java/org/gtkim/example/NettyHttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpEchoServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpEchoServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/HttpEchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/HttpEchoServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/NettyHttpEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/NettyHttpEchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/SslContextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java/org/gtkim/example/SslContextFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpEchoServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpsEchoServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpsEchoServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/java/org/gtikim/example/HttpsEchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/java/org/gtikim/example/HttpsEchoServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/java/org/gtikim/example/NettyHttpsEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/java/org/gtikim/example/NettyHttpsEchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NettyHttpsEchoServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyLoadBalancer/src/main/java/org/gtkim/LoadBalanceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyLoadBalancer/src/main/java/org/gtkim/LoadBalanceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyLoadBalancer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/LoadBalanceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyLoadBalancer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/LoadBalanceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/ProxyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/ProxyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/AsyncClientRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/AsyncClientRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ProxyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ProxyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ProxyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/java/org/gtkim/nettyWrap/tcp/adapter/handler/ProxyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyProxyServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NettyProxyServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyTcpServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyTcpServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyTcpServer/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyTcpServer/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyTcpServer/src/main/java/org/example/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyTcpServer/src/main/java/org/example/ServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyTcpServer/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyTcpServer/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyTcpTgrmResponseServer/src/main/java/org/gtkim/example/TgrmResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/NettyTcpTgrmResponseServer/src/main/java/org/gtkim/example/TgrmResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/example/nettyWrap/tcp/adapter/AsyncTcpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/example/nettyWrap/tcp/adapter/AsyncTcpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/example/nettyWrap/tcp/adapter/AsyncTcpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty_wrap/src/main/java/org/gtkim/example/nettyWrap/tcp/adapter/AsyncTcpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty_wrap/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty_wrap/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/application.properties.load" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/NettyServer">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/NettyWrap">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/NettyWrap">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/NettyServer">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyServer" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyServer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyServer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ksa9382&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b2586b5f-d236-4f8f-a877-41a5a69f229e" />
+        <option name="url" value="https://github.com/ksa9382/Java-Network-Example.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YWHCLcdlpEyRYP5AdpIbQhzcEL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.NettyServer [bootJar].executor": "Run",
+    "Gradle.NettyServer [build].executor": "Run",
+    "Gradle.NettyServer [jar].executor": "Run",
+    "Gradle.NettyWrap 빌드.executor": "Run",
+    "JUnit.KftcResponseCreatorTest.testMakeResponse1.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.BasicSocketClient [package].executor": "Run",
+    "Maven.NettyEchoServer [clean].executor": "Run",
+    "Maven.NettyEchoServer [package].executor": "Run",
+    "Maven.NettyHttpClient [package].executor": "Run",
+    "Maven.NettyHttpEchoServer [clean].executor": "Run",
+    "Maven.NettyHttpEchoServer [package].executor": "Run",
+    "Maven.NettyProxyServer [package].executor": "Run",
+    "Maven.NettyTcpServer [package].executor": "Run",
+    "Maven.netty_wrap [install].executor": "Run",
+    "Maven.netty_wrap [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BasicSocketClientApplication.executor": "Run",
+    "Spring Boot.NettyTcpClientApplication.executor": "Run",
+    "Spring Boot.NettyWrapApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Sources/2. IntelliJWorkspace/Java-Network-Example/NettyHttpsEchoServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.24367817",
+    "rearrange.code.on.save": "true",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.App.executor": "Debug",
+    "애플리케이션.LoadBalancing.executor": "Run",
+    "애플리케이션.NettyHttpEchoServer.executor": "Run",
+    "애플리케이션.NettyHttpsEchoServer.executor": "Run",
+    "애플리케이션.NettyTcpServer.executor": "Run",
+    "애플리케이션.Proxy.executor": "Debug",
+    "애플리케이션.SimpleTcpEcho.executor": "Run",
+    "애플리케이션.TcpEchoServer.executor": "Run",
+    "애플리케이션.WTCResponseServer.executor": "Run"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyServer\src\main\resources" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\BasicSocketClient\src\main\java\kr\co\direa\basicsocketclient\client" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\LengthTest\src\main\java\kr\co\direa" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyEchoServer" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyWrap\src\main\resources" />
+      <recent name="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyWrap\src\main\resources\adapter\tcp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.gtkim.example" />
+      <recent name="org.gtkim" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.gtikim.nettywrap.tcp.adapter" />
+      <recent name="org.gtkim.nettyWrap.tcp.adapter.handler.response" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.gtkim.nettyWrap.tcp.adapter.response" />
+      <recent name="org.gtkim.nettyWrap.tcp.adapter.handler" />
+      <recent name="org.gtkim" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="애플리케이션.NettyHttpsEchoServer">
+    <configuration name="LoadBalancing" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.gtkim.App" />
+      <module name="NettyLoadBalancer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyHttpEchoServer" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.gtkim.example.NettyHttpEchoServer" />
+      <module name="NettyHttpEchoServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NettyHttpEchoServer/src/main/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyHttpsEchoServer" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.gtikim.example.NettyHttpsEchoServer" />
+      <module name="NettyHttpsEchoServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NettyHttpsEchoServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyTcpServer" type="Application" factoryName="Application" temporary="true">
+      <envs>
+        <env name="-cp" value="C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyTcpServer\src\main\resources" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="NettyTcpServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Proxy" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.gtkim.App" />
+      <module name="NettyProxyServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NettyProxyServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleTcpEcho" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="kr.co.direa.App" />
+      <module name="LengthTest" />
+      <option name="PROGRAM_PARAMETERS" value="8284" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TcpEchoServer" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="LANG" value="en_US.UTF-8" />
+        <env name="LC_ALL" value="en_US.UTF-8" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.gtkim.App" />
+      <module name="NettyEchoServer" />
+      <option name="PROGRAM_PARAMETERS" value="-cp C:\Sources\2. IntelliJWorkspace\Java-Network-Example\NettyEchoServer\src\main\resources\log4j2.xml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyServer [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NettyServer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="NettyServer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NettyServer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="NettyServer [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NettyServer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BasicSocketClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BasicSocketClient" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kr.co.direa.basicsocket.BasicSocketClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LotteCardInteractionTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="LotteCardInteractionTest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kr.co.direa.lottecardinteractiontest.LotteCardInteractionTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="NettyServer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kr.co.direa.nettyserver.NettyServerApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/NettyServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyTcpClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="NettyTcpClient" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kr.co.direa.netty.tcp.NettyTcpClientApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.direa.netty.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyWrapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="NettyWrap.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.gtikim.nettywrap.NettyWrapApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.NettyServer [bootJar]" />
+      <item itemvalue="Gradle.NettyServer [build]" />
+      <item itemvalue="Gradle.NettyServer [jar]" />
+      <item itemvalue="Spring Boot.LotteCardInteractionTestApplication" />
+      <item itemvalue="Spring Boot.NettyServerApplication" />
+      <item itemvalue="Spring Boot.BasicSocketClientApplication" />
+      <item itemvalue="Spring Boot.NettyWrapApplication" />
+      <item itemvalue="Spring Boot.NettyTcpClientApplication" />
+      <item itemvalue="애플리케이션.NettyHttpsEchoServer" />
+      <item itemvalue="애플리케이션.LoadBalancing" />
+      <item itemvalue="애플리케이션.NettyHttpEchoServer" />
+      <item itemvalue="애플리케이션.Proxy" />
+      <item itemvalue="애플리케이션.SimpleTcpEcho" />
+      <item itemvalue="애플리케이션.TcpEchoServer" />
+      <item itemvalue="애플리케이션.NettyTcpServer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.NettyServer [bootJar]" />
+        <item itemvalue="Gradle.NettyServer [jar]" />
+        <item itemvalue="Gradle.NettyServer [build]" />
+        <item itemvalue="애플리케이션.NettyTcpServer" />
+        <item itemvalue="Spring Boot.NettyTcpClientApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-azul-21.0.1-4caba194b151-49bba082" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="73dd1a95-0bc2-45b9-86e2-b7d4ab2cd5ef" name="변경" comment="" />
+      <created>1700634286523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700634286523</updated>
+      <workItem from="1700634287816" duration="3308000" />
+      <workItem from="1701330902132" duration="2664000" />
+      <workItem from="1701338619405" duration="813000" />
+      <workItem from="1701401144673" duration="3492000" />
+      <workItem from="1701649682272" duration="18000" />
+      <workItem from="1701676722633" duration="2162000" />
+      <workItem from="1701684719314" duration="3907000" />
+      <workItem from="1702464745721" duration="4611000" />
+      <workItem from="1702528357913" duration="37191000" />
+      <workItem from="1703121899309" duration="17000" />
+      <workItem from="1703214431995" duration="696000" />
+      <workItem from="1703233912411" duration="3000" />
+      <workItem from="1704365198773" duration="10406000" />
+      <workItem from="1704418588244" duration="1296000" />
+      <workItem from="1704423233064" duration="6793000" />
+      <workItem from="1704441189064" duration="2085000" />
+      <workItem from="1704776247547" duration="104000" />
+      <workItem from="1704851527543" duration="1159000" />
+      <workItem from="1704852698543" duration="1619000" />
+      <workItem from="1705042150549" duration="869000" />
+      <workItem from="1705296071809" duration="617000" />
+      <workItem from="1705305722019" duration="3580000" />
+      <workItem from="1705371996784" duration="607000" />
+      <workItem from="1706601249477" duration="2115000" />
+      <workItem from="1706668478149" duration="7000" />
+      <workItem from="1706926376743" duration="9000" />
+      <workItem from="1707864345337" duration="190000" />
+      <workItem from="1708414650200" duration="29000" />
+      <workItem from="1708415156217" duration="386000" />
+      <workItem from="1708642811636" duration="34000" />
+      <workItem from="1708649566692" duration="47000" />
+      <workItem from="1708673649005" duration="1714000" />
+      <workItem from="1710141128948" duration="553000" />
+      <workItem from="1710233417514" duration="36000" />
+      <workItem from="1713769987896" duration="166000" />
+      <workItem from="1713770164987" duration="9398000" />
+      <workItem from="1713933204625" duration="3000" />
+      <workItem from="1714011980620" duration="11000" />
+      <workItem from="1716358249766" duration="22666000" />
+      <workItem from="1716786960296" duration="17999000" />
+      <workItem from="1716944941216" duration="1537000" />
+      <workItem from="1719279037804" duration="1666000" />
+      <workItem from="1719280717364" duration="549000" />
+      <workItem from="1719281280154" duration="697000" />
+      <workItem from="1719281988976" duration="59000" />
+      <workItem from="1719282065358" duration="57000" />
+      <workItem from="1719282126599" duration="28000" />
+      <workItem from="1719282157039" duration="14000" />
+      <workItem from="1719282183390" duration="106000" />
+      <workItem from="1719282869751" duration="6652000" />
+      <workItem from="1719473455368" duration="610000" />
+      <workItem from="1719804225681" duration="2000" />
+      <workItem from="1719988142226" duration="3476000" />
+      <workItem from="1720146485989" duration="4913000" />
+      <workItem from="1720569120934" duration="6393000" />
+      <workItem from="1724634927657" duration="7292000" />
+      <workItem from="1724724977416" duration="652000" />
+      <workItem from="1724750223005" duration="227000" />
+      <workItem from="1724750484273" duration="59000" />
+      <workItem from="1724750849239" duration="607000" />
+      <workItem from="1724920589223" duration="5192000" />
+      <workItem from="1726130185400" duration="8321000" />
+      <workItem from="1726704877439" duration="509000" />
+      <workItem from="1726732904233" duration="7480000" />
+      <workItem from="1726811709166" duration="8000" />
+      <workItem from="1726817658102" duration="3210000" />
+      <workItem from="1727310198114" duration="2645000" />
+      <workItem from="1727611165553" duration="619000" />
+      <workItem from="1728025058694" duration="16000" />
+      <workItem from="1728355744858" duration="670000" />
+      <workItem from="1728362912476" duration="10894000" />
+      <workItem from="1728521000807" duration="2183000" />
+      <workItem from="1728608374184" duration="2797000" />
+      <workItem from="1729138221991" duration="4269000" />
+      <workItem from="1729494917862" duration="4082000" />
+      <workItem from="1729756406395" duration="1946000" />
+      <workItem from="1730699253669" duration="27000" />
+      <workItem from="1731568962477" duration="2825000" />
+      <workItem from="1732695708153" duration="1893000" />
+      <workItem from="1732702119815" duration="1645000" />
+      <workItem from="1733036520408" duration="1791000" />
+      <workItem from="1733127743684" duration="738000" />
+      <workItem from="1733128741180" duration="617000" />
+      <workItem from="1733131441413" duration="6006000" />
+      <workItem from="1733185424801" duration="5732000" />
+      <workItem from="1733710223942" duration="640000" />
+      <workItem from="1733746522649" duration="2936000" />
+      <workItem from="1733749625260" duration="1389000" />
+      <workItem from="1733796177845" duration="285000" />
+      <workItem from="1733799383850" duration="11000" />
+      <workItem from="1734264617271" duration="5195000" />
+      <workItem from="1734418557773" duration="88000" />
+      <workItem from="1734943406325" duration="606000" />
+      <workItem from="1735175503168" duration="3055000" />
+      <workItem from="1735260393929" duration="9000" />
+      <workItem from="1735285659541" duration="412000" />
+      <workItem from="1737611423825" duration="3769000" />
+    </task>
+    <task id="LOCAL-00001" summary=" HttpEchoServer 추가">
+      <created>1701421540816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701421540816</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tcpProxy/loadBalancer 추가">
+      <created>1702614407822</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702614407822</updated>
+    </task>
+    <task id="LOCAL-00003" summary="KafkaClient 프로젝트 생성">
+      <created>1705309480149</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705309480149</updated>
+    </task>
+    <task id="LOCAL-00004" summary="불필요 모듈 삭제">
+      <option name="closed" value="true" />
+      <created>1713770647555</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770647555</updated>
+    </task>
+    <task id="LOCAL-00005" summary="netty_wrap 프로젝트와 NettyProxyServer 프로젝트에 롬복 적용">
+      <option name="closed" value="true" />
+      <created>1716540124208</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716540124208</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SpringBoot로 Adapter 프로젝트 생성">
+      <option name="closed" value="true" />
+      <created>1716806569148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716806569148</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.apache.kafka:kafka_2.13" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value=" HttpEchoServer 추가" />
+    <MESSAGE value="tcpProxy/loadBalancer 추가" />
+    <MESSAGE value="KafkaClient 프로젝트 생성" />
+    <MESSAGE value="불필요 모듈 삭제" />
+    <MESSAGE value="netty_wrap 프로젝트와 NettyProxyServer 프로젝트에 롬복 적용" />
+    <MESSAGE value="SpringBoot로 Adapter 프로젝트 생성" />
+    <MESSAGE value="FIX:" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX:" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="responseBuilder" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

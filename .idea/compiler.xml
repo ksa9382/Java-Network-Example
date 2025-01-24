@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="NettyHttpClient" />
+        <module name="NettyHttpEchoServer" />
+        <module name="netty_wrap" />
+        <module name="NettyEchoServer" />
+        <module name="NettyLoadBalancer" />
+        <module name="BasicSocketClient" />
+        <module name="NettyTcpServer" />
+        <module name="NettyProxyServer" />
+        <module name="LengthTest" />
+        <module name="NettyHttpsEchoServer" />
+        <module name="NettyTcpTgrmResponseServer" />
+        <module name="NettyTcpClient" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="NettyServer.main" />
+      </profile>
+      <profile name="Annotation profile for LotteCardInteractionTest" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="LotteCardInteractionTest" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="KafkaClient" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BasicSocketClient" options="-parameters" />
+      <module name="LotteCardInteractionTest" options="-parameters" />
+      <module name="NettyTcpClient" options="-parameters" />
+    </option>
+  </component>
+</project>
