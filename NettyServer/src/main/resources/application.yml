@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: NettyServer
+
+server:
+  netty:
+    boss-thread-count: 1                                   # ?? ??? (1?? ?? - ??? ???? ??)
+    worker-thread-count: 16                                # CPU ?? ?? ??? ? ?? (??? ?? ??? ?)
+    backlog: 512                                           # ?? ?? ? ??
+    keep-alive: true                                       # KeepAlive ???
+    send-buffer-size: 65536                                # TCP ?? ?? ?? (64KB)
+    receive-buffer-size: 65536                             # TCP ?? ?? ?? (64KB)
+    write-buffer-water-mark: # Netty ?? ?? ???? ??
+      low: 32768                                           # ?? ???? (32KB)
+      high: 65536                                          # ?? ???? (64KB)
+
+logging:
+  config: "${user.dir}/src/main/resources/logback-spring.xml"
+
+async:
+  thread-pool:
+    core-size: 10                  # ?? ??? ??
+    max-size: 20                   # ?? ??? ??
+    queue-capacity: 500            # ??? ??
+    thread-name-prefix: "Async-"   # ??? ?? ????
+
+tgrm:
+  replace-offset: 8
+  replace-string: ASDF

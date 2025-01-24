@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: BasicSocketClient
+
+tcp:
+  remote-ip: 127.0.0.1
+  remote-port: 9543
