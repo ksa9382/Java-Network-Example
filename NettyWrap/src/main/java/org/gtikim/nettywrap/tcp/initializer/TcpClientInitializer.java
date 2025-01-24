@@ -1,10 +1,11 @@
-package org.gtikim.nettywrap.tcp.handler;
+package org.gtikim.nettywrap.tcp.initializer;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.gtikim.nettywrap.tcp.handler.AbstractTcpClientHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
