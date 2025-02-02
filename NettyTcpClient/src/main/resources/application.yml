@@ -5,6 +5,7 @@ spring:
 netty:
   tcp:
     client:
-      #      peer-ip: 127.0.0.1
-      peer-ip: 192.168.1.205
-      peer-port: 15001
+      peer-ip: 127.0.0.1
+      #      peer-ip: 192.168.1.205
+      peer-port: 33320
+#      peer-port: 15001

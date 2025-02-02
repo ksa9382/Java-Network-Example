@@ -22,6 +22,7 @@ import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
+import io.netty.handler.ssl.SslProvider;
 import lombok.extern.log4j.Log4j2;
 
 /**
@@ -34,25 +35,31 @@ public class NettyHttpsEchoServer {
 		String workspace = System.getProperty("user.dir");
 		log.debug("Current Directory: [" + workspace + "]");
 
+		// Properties prop = loadProperties(
+		// 	workspace + File.separator
+		// 		+ "src" + File.separator + "main" + File.separator
+		// 		+ "resources" + File.separator + "application.properties");
+
 		Properties prop = loadProperties(
-			workspace + File.separator
-				+ "src" + File.separator + "main" + File.separator
-				+ "resources" + File.separator + "application.properties");
+			workspace + File.separator + "resources" + File.separator + "application.properties");
 
 		int port = Integer.parseInt(prop.getProperty("serverPort"));
+		String sslTlsVer = prop.getProperty("sslTlsVer");
+		String jksPath = prop.getProperty("jksPath");
 
 		KeyStore keyStore = KeyStore.getInstance("JKS");
-		FileInputStream keyStoreFileStream = new FileInputStream("C:\\Users\\DIR-N-171\\.cert\\server.jks");
+		// FileInputStream keyStoreFileStream = new FileInputStream("C:\\Users\\DIR-N-171\\.cert\\server.jks");
+		FileInputStream keyStoreFileStream = new FileInputStream(jksPath);
 		keyStore.load(keyStoreFileStream, "ks24453944".toCharArray());
 
 		KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
 		kmf.init(keyStore, "ks24453944".toCharArray());
 
 		// SSL/TLS 설정
-		//        SelfSignedCertificate ssc = new SelfSignedCertificate();
 		final SslContext sslContext = SslContextBuilder
 			.forServer(kmf)
-			.protocols("TLSv1.2")
+			.sslProvider(SslProvider.JDK)
+			.protocols(sslTlsVer)
 			.build();
 
 		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -75,7 +82,7 @@ public class NettyHttpsEchoServer {
 				});
 
 			log.debug("HTTP Echo Server started on port " + port);
-			ChannelFuture future = serverBootstrap.bind(port).sync();
+			ChannelFuture future = serverBootstrap.bind("0.0.0.0", port).sync();
 
 			future.channel().closeFuture().sync();
 		} finally {
